@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "71496470408",
+    "project_id": "eventos-puerto-montt",
+    "storage_bucket": "eventos-puerto-montt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71496470408:android:2540a8230b357ec2bb343d",
+        "android_client_info": {
+          "package_name": "com.stomas.eventospuertomontt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71496470408-o6j99uqmf3717ogavchrq1385oh65bbv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stomas.eventospuertomontt",
+            "certificate_hash": "d994af77970b583052847cb7e5a981138192da77"
+          }
+        },
+        {
+          "client_id": "71496470408-dtoquaajrd0rck6k8fhook0hm6nq2c1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTaLgHo5nbn0TuWNSMUxYyGbDjzpwBDRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71496470408-3ntp3tdv7e9c91rq6guf8b20l6uk5t8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
