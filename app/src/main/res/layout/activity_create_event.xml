@@ -10,28 +10,36 @@
         android:id="@+id/btn_cancelarCreacion"
         android:layout_width="152dp"
         android:layout_height="60dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="#CD0E0E"
         android:text="Cancelar"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion_txt"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btn_guardarCreacion"
+        android:id="@+id/btn_guardarEventoNuevo"
         android:layout_width="152dp"
         android:layout_height="60dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="#269A06"
         android:text="Guardar"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion_txt"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextText8"
+        android:id="@+id/descripcion_txt"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="351dp"
         android:layout_height="104dp"
@@ -40,12 +48,14 @@
         android:inputType="text"
         android:text="Descripcion del evento"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
+        app:layout_constraintTop_toBottomOf="@+id/lugar_txt" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/organizador_txt"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="351dp"
         android:layout_height="49dp"
@@ -54,12 +64,13 @@
         android:inputType="text"
         android:text="Organizador"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_txt" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/lugar_txt"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="351dp"
         android:layout_height="49dp"
@@ -68,26 +79,31 @@
         android:inputType="text"
         android:text="Lugar del evento"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate2" />
+        app:layout_constraintTop_toBottomOf="@+id/timeButton" />
 
-    <EditText
-        android:id="@+id/editTextDate2"
+    <Button
+        android:id="@+id/dateButtonDialog"
+        style="?android:spinnerStyle"
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
+        android:backgroundTint="#BDB9B9"
         android:ems="10"
-        android:inputType="date"
-        android:text="Fecha del Evento"
+        android:onClick="openDatePicker"
+        android:text="Seleccionar fecha del evento"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
+        app:layout_constraintTop_toBottomOf="@+id/organizador_txt" />
+
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/nombre_txt"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="351dp"
         android:layout_height="49dp"
@@ -96,6 +112,7 @@
         android:inputType="text"
         android:text="Nombre del Evento"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -104,11 +121,31 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:text="Crear Evento"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/timeButton"
+        android:layout_width="351dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#D8D3D3"
+        android:ems="10"
+        android:inputType="time"
+        android:onClick="popTimePicker"
+        android:text="Seleccionar hora del evento"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateButtonDialog" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

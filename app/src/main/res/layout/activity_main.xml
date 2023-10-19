@@ -6,25 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt_MenuComun"
-        android:layout_width="268dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="92dp"
-        android:backgroundTint="#37479C"
-        android:text="Menu Normal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#2457A6" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="173dp"
         android:layout_height="60dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="68dp"
         android:text="Eventos "
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +25,7 @@
         android:text="Puerto Montt"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -47,13 +33,24 @@
         android:id="@+id/bt_inicioSesion"
         android:layout_width="265dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="60dp"
         android:backgroundTint="#D80404"
-        android:text="Menu Adm"
+        android:text="@string/bt_inicioSesion"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:iconTint="#811C1C"
-        app:layout_constraintBottom_toTopOf="@+id/bt_MenuComun"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="344dp"
+        android:layout_height="251dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/puerto_montt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
